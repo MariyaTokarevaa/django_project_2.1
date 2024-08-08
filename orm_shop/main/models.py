@@ -51,7 +51,7 @@ class Car(models.Model):
     year = models.IntegerField()
     color = models.CharField(max_length=50)
     mileage = models.IntegerField()
-    volume = models.IntegerField()
+    volume = models.DecimalField(max_digits=10, decimal_places=2)
     body_type = models.CharField(max_length=50, choices=BODY_TYPE_CHOICES)
     drive_unit = models.CharField(max_length=50, choices=DRIVE_UNIT_CHOICES)
     gearbox = models.CharField(max_length=50, choices=GEARBOX_CHOICES)
